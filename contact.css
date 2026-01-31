@@ -1,0 +1,598 @@
+/* СТРАНИЦА КОНТАКТОВ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ГЛАВНЫЙ БАННЕР */
+.contact-hero {
+    position: relative;
+    height: 500px;
+    margin-top: 86px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), 
+                url('../foto/yyl.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    opacity: 0.95;
+    margin-bottom: 25px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #d32f2f, #ff9800);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.badge-icon {
+    font-size: 18px;
+}
+
+/* Основной контент */
+.contact-content {
+    width: 100%;
+}
+
+/* Основная контактная информация */
+.contact-main {
+    padding: 80px 0;
+    background: white;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+/* Левая колонка: Контактные данные */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.info-header {
+    margin-bottom: 10px;
+}
+
+.info-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.header-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #d32f2f, #ff9800);
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.info-subtitle {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Карточки с информацией */
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-color: #ddd;
+}
+
+.card-icon {
+    font-size: 24px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #d32f2f, #ff9800);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover .card-icon {
+    transform: scale(1.1);
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #d32f2f;
+    margin-bottom: 5px;
+}
+
+.card-note {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.phone-extensions,
+.email-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.extension,
+.email-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.ext-label,
+.email-label {
+    color: #666;
+    font-weight: 500;
+    min-width: 100px;
+}
+
+.ext-number {
+    color: #d32f2f;
+    font-weight: 500;
+}
+
+.email-address {
+    color: #ff9800;
+    font-weight: 500;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.day {
+    color: #666;
+    font-size: 14px;
+}
+
+.time {
+    color: #d32f2f;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    border: 1px solid #eaeaea;
+    min-width: 150px;
+}
+
+.social-link:hover {
+    background: linear-gradient(135deg, #d32f2f, #ff9800);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.3);
+    border-color: transparent;
+}
+
+.social-link span {
+    font-weight: 500;
+    color: inherit;
+}
+
+/* Правая колонка: Карта и транспорт */
+.contact-map {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Карта */
+.map-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    border: 1px solid #eaeaea;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    background: #f8f9fa;
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 25px;
+    z-index: 10;
+}
+
+.overlay-content h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.overlay-content p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.map-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.feature {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Как добраться */
+.transport-info {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+}
+
+.transport-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.transport-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.transport-option {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.transport-option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-color: #ddd;
+}
+
+.transport-option::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #d32f2f, #ff9800);
+    border-radius: 2px 0 0 2px;
+}
+
+.transport-icon {
+    font-size: 22px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #d32f2f, #ff9800);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+.transport-details h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.transport-details p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.transport-time {
+    font-size: 14px;
+    color: #ff9800;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-card,
+.transport-option,
+.social-link {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.info-card:nth-child(1) { animation-delay: 0.1s; }
+.info-card:nth-child(2) { animation-delay: 0.2s; }
+.info-card:nth-child(3) { animation-delay: 0.3s; }
+.info-card:nth-child(4) { animation-delay: 0.4s; }
+.transport-option:nth-child(1) { animation-delay: 0.5s; }
+.transport-option:nth-child(2) { animation-delay: 0.6s; }
+.social-link:nth-child(1) { animation-delay: 0.7s; }
+.social-link:nth-child(2) { animation-delay: 0.8s; }
+.social-link:nth-child(3) { animation-delay: 0.9s; }
+
+/* Минималистичные улучшения */
+.info-card h3,
+.transport-details h4 {
+    font-weight: 500;
+    letter-spacing: -0.3px;
+}
+
+.card-text,
+.transport-time {
+    font-weight: 400;
+}
+
+.contact-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .contact-hero {
+        height: 400px;
+        margin-top: 70px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 42px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .contact-main {
+        padding: 60px 0;
+    }
+    
+    .info-header h2 {
+        font-size: 28px;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+    
+    .transport-options {
+        gap: 15px;
+    }
+    
+    .transport-option {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .transport-icon {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-hero {
+        height: 350px;
+        margin-top: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-badge {
+        margin: 0 auto;
+    }
+    
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .card-icon {
+        margin: 0 auto 15px;
+    }
+    
+    .social-link {
+        min-width: 120px;
+        justify-content: center;
+    }
+    
+    .extension,
+    .email-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .ext-label,
+    .email-label {
+        min-width: auto;
+    }
+}
+
+/* Анимированный градиент для разделителя */
+.header-divider {
+    background: linear-gradient(90deg, #d32f2f, #ff9800, #d32f2f);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
