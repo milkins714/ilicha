@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сингл | Отель Ильича</title>
+
+    <!-- Подключаем шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/room-page.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <!-- ШАПКА -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <!-- Логотип -->
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <div class="logo-main">ИЛЬИЧА</div>
+                    <div class="logo-sub">ВЛАДИМИР • 1971</div>
+                </div>
+            </a>
+
+            <!-- Навигация -->
+            <nav class="main-nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="rooms.html" class="active">Номерной фонд</a></li>
+                    <li><a href="restaurant.html">Ресторан</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+
+                <!-- Правый блок -->
+                <div class="header-right">
+                    <div class="header-phone">
+                        <div class="phone-number">+7 (900) 777-55-88</div>
+                        <div class="phone-label">Владимир, ул. Ильича, 9</div>
+                    </div>
+                    <a href="/booking" class="booking-btn">
+                        <span>Забронировать</span>
+                    </a>
+                </div>
+
+                <!-- Кнопка мобильного меню -->
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- СТРАНИЦА НОМЕРА -->
+    <section class="room-page">
+        <div class="room-header">
+            <div class="room-breadcrumbs">
+                <a href="rooms.html">Номера</a>
+                <span> / </span>
+                <span class="current">Сингл</span>
+            </div>
+        </div>
+
+        <div class="room-content-wrapper">
+            <!-- Левая колонка: Галерея -->
+            <div class="room-gallery-column">
+                <div class="room-main-image">
+                    <img src="foto/2026-01-31 ss.jpg" alt="Сингл" id="mainImage">
+                </div>
+                <div class="room-thumbnails">
+                    <div class="thumbnail active" data-index="0">
+                        <img src="foto/2026-01-31 ov.jpg" alt="Общий вид">
+                    </div>
+                    <div class="thumbnail" data-index="1">
+                        <img src="foto/2026-01-31 sz.jpg" alt="Спальная зона">
+                    </div>
+                    <div class="thumbnail" data-index="2">
+                        <img src="foto/2026-01-31 tk.jpg" alt="Ванная комната">
+                    </div>
+                    <div class="thumbnail" data-index="3">
+                        <img src="foto/2026-01-31 rs.jpg" alt="Рабочий стол">
+                    </div>
+                </div>
+                <div class="gallery-nav">
+                    <button class="nav-btn prev-btn">‹</button>
+                    <div class="image-counter">
+                        <span id="currentImage">1</span> / <span id="totalImages">4</span>
+                    </div>
+                    <button class="nav-btn next-btn">›</button>
+                </div>
+            </div>
+
+            <!-- Правая колонка: Контент -->
+            <div class="room-info-column">
+                <!-- Заголовок и цена -->
+                <div class="room-title-section">
+                    <h1 class="room-title">Сингл</h1>
+                    <div class="room-price-tag">
+                        <span class="price">4 500 ₽</span>
+                        <span class="period">/ ночь</span>
+                    </div>
+                </div>
+
+                <!-- Описание номера -->
+                <div class="room-description">
+                    <h2>О номере</h2>
+                    <p>Стандартный номер в стиле советского модернизма 1970-х годов. Сдержанная цветовая гамма, чистые линии и функциональная мебель создают атмосферу эпохи развитого социализма.</p>
+                    <p>Сохранились оригинальные паркетные полы и деревянные оконные рамы. Номер идеально подходит для комфортного отдыха после насыщенного дня.</p>
+                </div>
+
+                <!-- Удобства -->
+                <div class="room-features">
+                    <h2>Удобства номера</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-icon">📏</span>
+                            <span class="feature-text">25 м²</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📺</span>
+                            <span class="feature-text">Телевизор</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">❄️</span>
+                            <span class="feature-text">Кондиционер</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔌</span>
+                            <span class="feature-text">Розетки у кровати</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📶</span>
+                            <span class="feature-text">Wi-Fi</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔒</span>
+                            <span class="feature-text">Сейф</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма бронирования -->
+                <div class="room-booking-form">
+                    <h2>Забронировать номер</h2>
+                    
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkin">Заезд</label>
+                                <input type="date" id="checkin" name="checkin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout">Выезд</label>
+                                <input type="date" id="checkout" name="checkout" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests">Гости</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="1">1 гость</option>
+                                    <option value="2" selected>2 гостя</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nights">Ночей</label>
+                                <div class="nights-display" id="nightsCount">2</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">ФИО</label>
+                            <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+7 (900) 123-45-67" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="ivanov@example.ru" required>
+                            </div>
+                        </div>
+
+                        <div class="price-summary">
+                            <div class="price-item">
+                                <span>4 500 ₽ × <span id="nightsValue">2</span> ночей</span>
+                                <span id="totalPrice">9 000 ₽</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Сервисный сбор</span>
+                                <span>450 ₽</span>
+                            </div>
+                            <div class="price-item total">
+                                <span>Итого к оплате</span>
+                                <span id="finalPrice">9 450 ₽</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-icon">✓</span>
+                            <span>Забронировать</span>
+                        </button>
+
+                        <div class="form-note">
+                            <span class="note-icon">ℹ️</span>
+                            <span>Бесплатная отмена за 48 часов до заезда</span>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Кнопка назад -->
+                <div class="room-navigation">
+                    <a href="rooms.html" class="back-link">
+                        <span class="link-icon">←</span>
+                        <span>Назад к номерам</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Контакты -->
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon"></div>
+                        <div class="logo-text">
+                            <div class="logo-main">ИЛЬИЧА</div>
+                            <div class="logo-sub">ВЛАДИМИР • 1971</div>
+                        </div>
+                    </a>
+                    
+                    <div class="footer-contacts">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Адрес</div>
+                                <div class="contact-value">Владимир, ул. Ильича, 9</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Телефон</div>
+                                <div class="contact-value">+7 (900) 777-55-88</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Почта</div>
+                                <div class="contact-value">welcome@ilyicha-hotel.ru</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Навигация -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="rooms.html" class="active">Номера</a></li>
+                        <li><a href="restaurant.html">Ресторан</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Соцсети -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/ilyicha_hotel" class="social-link" target="_blank">
+                            <div class="social-icon">📱</div>
+                            <span>Telegram</span>
+                        </a>
+                        
+                        <a href="https://vk.com/ilyicha_hotel" class="social-link" target="_blank">
+                            <div class="social-icon">👥</div>
+                            <span>ВКонтакте</span>
+                        </a>
+                        
+                        <a href="https://instagram.com/ilyicha_hotel" class="social-link" target="_blank">
+                            <div class="social-icon">📸</div>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                    
+                    <div class="footer-booking">
+                        <a href="/booking" class="booking-btn">
+                            <span>Забронировать номер</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Нижняя часть -->
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 Отель «Ильича». Все права защищены.</div>
+                <div class="footer-links-bottom">
+                    <a href="/privacy">Политика конфиденциальности</a>
+                    <a href="/terms">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/room-gallery.js"></script>
+
+</body>
+
+</html>

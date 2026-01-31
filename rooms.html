@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номерной фонд | Отель Ильича</title>
+
+    <!-- Подключаем шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rooms.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <!-- ШАПКА -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <!-- Логотип -->
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <div class="logo-main">ИЛЬИЧА</div>
+                    <div class="logo-sub">ВЛАДИМИР • 1971</div>
+                </div>
+            </a>
+
+            <!-- Навигация -->
+            <nav class="main-nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="rooms.html" class="active">Номерной фонд</a></li>
+                    <li><a href="restaurant.html">Ресторан</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+
+                <!-- Правый блок -->
+                <div class="header-right">
+                    <div class="header-phone">
+                        <div class="phone-number">+7 (900) 777-55-88</div>
+                        <div class="phone-label">Владимир, ул. Ильича, 9</div>
+                    </div>
+                    <a href="/booking" class="booking-btn">
+                        <span>Забронировать</span>
+                    </a>
+                </div>
+
+                <!-- Кнопка мобильного меню -->
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- СПИСОК НОМЕРОВ -->
+    <section class="rooms-list">
+        <div class="container">
+            <div class="rooms-grid">
+                <!-- Номер 1: Сингл -->
+                <a href="room-singl.html" class="room-card">
+                    <div class="room-image">
+                        <img src="foto/2026-01-31 ss.jpg" alt="Сингл">
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-name">Сингл</h3>
+                        <p class="room-description">Уютный номер с минималистичным дизайном, вдохновленным советским модернизмом</p>
+                        <div class="room-size">25 м²</div>
+                        <div class="room-more">
+                            <span>Подробнее</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Номер 2: Дабл -->
+                <a href="room-dabl.html" class="room-card">
+                    <div class="room-image">
+                        <img src="foto/2026-01-31 dd.jpg" alt="Дабл">
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-name">Дабл</h3>
+                        <p class="room-description">Просторный номер с видом на город и элементами винтажной мебели</p>
+                        <div class="room-size">35 м²</div>
+                        <div class="room-more">
+                            <span>Подробнее</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Номер 3: Джуниор Сьют -->
+                <a href="room-djsute.html" class="room-card">
+                    <div class="room-image">
+                        <img src="foto/2026-01-31 cc.jpg" alt="Джуниор Сьют">
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-name">Джуниор Сьют</h3>
+                        <p class="room-description">Эксклюзивный номер с мини кухней и гостиной, где присутствует советский дух.</p>
+                        <div class="room-size">50 м²</div>
+                        <div class="room-more">
+                            <span>Подробнее</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Контакты -->
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon"></div>
+                        <div class="logo-text">
+                            <div class="logo-main">ИЛЬИЧА</div>
+                            <div class="logo-sub">ВЛАДИМИР • 1971</div>
+                        </div>
+                    </a>
+                    
+                    <div class="footer-contacts">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Адрес</div>
+                                <div class="contact-value">Владимир, ул. Ильича, 9</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Телефон</div>
+                                <div class="contact-value">+7 (900) 777-55-88</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Почта</div>
+                                <div class="contact-value">welcome@ilyicha-hotel.ru</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Навигация -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="rooms.html" class="active">Номера</a></li>
+                        <li><a href="restaurant.html">Ресторан</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Соцсети -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/ilyicha_hotel" class="social-link" target="_blank">
+                            <div class="social-icon">📱</div>
+                            <span>Telegram</span>
+                        </a>
+                        
+                        <a href="https://vk.com/ilyicha_hotel" class="social-link" target="_blank">
+                            <div class="social-icon">👥</div>
+                            <span>ВКонтакте</span>
+                        </a>
+                        
+                        <a href="https://instagram.com/ilyicha_hotel" class="social-link" target="_blank">
+                            <div class="social-icon">📸</div>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                    
+                    <div class="footer-booking">
+                        <a href="/booking" class="booking-btn">
+                            <span>Забронировать номер</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Нижняя часть -->
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 Отель «Ильича». Все права защищены.</div>
+                <div class="footer-links-bottom">
+                    <a href="/privacy">Политика конфиденциальности</a>
+                    <a href="/terms">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

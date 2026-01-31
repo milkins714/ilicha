@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея | Отель Ильича</title>
+
+    <!-- Подключаем шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ШАПКА -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <!-- Логотип -->
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <div class="logo-main">ИЛЬИЧА</div>
+                    <div class="logo-sub">ВЛАДИМИР • 1971</div>
+                </div>
+            </a>
+
+            <!-- Навигация -->
+            <nav class="main-nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="rooms.html">Номерной фонд</a></li>
+                    <li><a href="restaurant.html">Ресторан</a></li>
+                    <li><a href="gallery.html" class="active">Галерея</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+
+                <!-- Правый блок -->
+                <div class="header-right">
+                    <div class="header-phone">
+                        <div class="phone-number">+7 (900) 777-55-88</div>
+                        <div class="phone-label">Владимир, ул. Ильича, 9</div>
+                    </div>
+                    <a href="/booking" class="booking-btn">
+                        <span>Забронировать</span>
+                    </a>
+                </div>
+
+                <!-- Кнопка мобильного меню -->
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ БАННЕР -->
+    <section class="gallery-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Галерея отеля</h1>
+            <p class="hero-subtitle">Окунитесь в атмосферу советского модернизма</p>
+        </div>
+    </section>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="gallery-content">
+
+        <!-- Категория 1: Ресепшен -->
+        <section class="gallery-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Ресепшен</h2>
+                    <div class="category-divider"></div>
+                    <p class="category-description">Торжественная встреча гостей в стиле советского модернизма</p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel" id="receptionCarousel">
+                            
+                            <!-- Основные изображения -->
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-21 01.38.34.jpg" alt="Ресепшен отеля">
+                                <div class="slide-caption">
+                                    <h3>Главный вход</h3>
+                                    <p>Торжественный холл с элементами советского модернизма</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-21 01.38.25.jpg" alt="Зона регистрации">
+                                <div class="slide-caption">
+                                    <h3>Зона регистрации</h3>
+                                    <p>Стол администратора с ретро-телефоном и пишущей машинкой</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-21 01.38.22.jpg" alt="Зона ожидания">
+                                <div class="slide-caption">
+                                    <h3>Зона ожидания</h3>
+                                    <p>Диваны в стиле 1970-х и оригинальные светильники</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-21 01.37.55.jpg" alt="Вид из холла">
+                                <div class="slide-caption">
+                                    <h3>Вид из холла</h3>
+                                    <p>Окна с видом на улицу Ильича</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Дубликат первого изображения в конец -->
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-21 01.38.34.jpg" alt="Ресепшен отеля">
+                                <div class="slide-caption">
+                                    <h3>Главный вход</h3>
+                                    <p>Торжественный холл с элементами советского модернизма</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn prev-btn" data-carousel="reception">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" data-carousel="reception">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="carousel-dots" id="receptionDots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Категория 2: Ресторан -->
+        <section class="gallery-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Ресторан «Среда»</h2>
+                    <div class="category-divider"></div>
+                    <p class="category-description">Гастрономическое пространство в стиле советского модернизма</p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel" id="restaurantCarousel">
+                            <!-- Основные изображения -->
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-21 01.37.42.jpg" alt="Основной зал ресторана">
+                                <div class="slide-caption">
+                                    <h3>Основной зал</h3>
+                                    <p>Просторное помещение с окнами</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="" alt="Вечерняя атмосфера">
+                                <div class="slide-caption">
+                                    <h3>Вечерняя атмосфера</h3>
+                                    <p>Теплый свет оригинальных люстр 1970-х</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="" alt="Барная стойка">
+                                <div class="slide-caption">
+                                    <h3>Барная стойка</h3>
+                                    <p>Классическая барная стойка с винтажными стульями</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="" alt="Сервировка стола">
+                                <div class="slide-caption">
+                                    <h3>Сервировка стола</h3>
+                                    <p>Фирменная сервировка в стиле советского ГОСТа</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Дубликат первого изображения в конец -->
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-21 01.37.42.jpg" alt="Основной зал ресторана">
+                                <div class="slide-caption">
+                                    <h3>Основной зал</h3>
+                                    <p>Просторное помещение с панорамными окнами</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn prev-btn" data-carousel="restaurant">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" data-carousel="restaurant">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="carousel-dots" id="restaurantDots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Категория 3: Номерной фонд -->
+        <section class="gallery-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Номерной фонд</h2>
+                    <div class="category-divider"></div>
+                    <p class="category-description">Комфортабельные номера в стиле советского модернизма</p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel" id="roomsCarousel">
+                            
+                            <!-- Основные изображения -->
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-31 ss.jpg" alt="Сингл">
+                                <div class="slide-caption">
+                                    <h3>Номер Сингл</h3>
+                                    <p>Минималистичный дизайн с элементами 1970-х</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-31 sz.jpg" alt="Спальная зона">
+                                <div class="slide-caption">
+                                    <h3>Спальная зона</h3>
+                                    <p>Уютная кровать с советским текстилем</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-31 tk.jpg" alt="Ванная комната">
+                                <div class="slide-caption">
+                                    <h3>Ванная комната</h3>
+                                    <p>Кафельная плитка образца 1970-х годов</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-31 rs.jpg" alt="Рабочий уголок">
+                                <div class="slide-caption">
+                                    <h3>Рабочий уголок</h3>
+                                    <p>Письменный стол с ретро-лампой</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Дубликат первого изображения в конец -->
+                            <div class="carousel-slide">
+                                <img src="foto/2026-01-31 ss.jpg" alt="Сингл">
+                                <div class="slide-caption">
+                                    <h3>Номер Сингл</h3>
+                                    <p>Минималистичный дизайн с элементами 1970-х</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn prev-btn" data-carousel="rooms">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" data-carousel="rooms">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="carousel-dots" id="roomsDots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Категория 4: Дополнительные фото -->
+        <section class="gallery-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Дополнительные фото</h2>
+                    <div class="category-divider"></div>
+                    <p class="category-description">Детали и атмосфера отеля «Ильича»</p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel" id="additionalCarousel">
+                            
+                            <!-- Основные изображения -->
+                            <div class="carousel-slide">
+                                <img src="" alt="Архитектурные детали">
+                                <div class="slide-caption">
+                                    <h3>Архитектурные детали</h3>
+                                    <p>Фасад здания в стиле советского брутализма</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="" alt="Винтажные элементы">
+                                <div class="slide-caption">
+                                    <h3>Винтажные элементы</h3>
+                                    <p>Оригинальные детали интерьера 1970-х</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="" alt="Освещение">
+                                <div class="slide-caption">
+                                    <h3>Освещение</h3>
+                                    <p>Художественные светильники эпохи модернизма</p>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="" alt="Вид из окна">
+                                <div class="slide-caption">
+                                    <h3>Вид из окна</h3>
+                                    <p>Панорамный вид на исторический центр Владимира</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Дубликат первого изображения в конец -->
+                            <div class="carousel-slide">
+                                <img src="" alt="Архитектурные детали">
+                                <div class="slide-caption">
+                                    <h3>Архитектурные детали</h3>
+                                    <p>Фасад здания в стиле советского брутализма</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn prev-btn" data-carousel="additional">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" data-carousel="additional">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="carousel-dots" id="additionalDots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Контакты -->
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon"></div>
+                        <div class="logo-text">
+                            <div class="logo-main">ИЛЬИЧА</div>
+                            <div class="logo-sub">ВЛАДИМИР • 1971</div>
+                        </div>
+                    </a>
+                    
+                    <div class="footer-contacts">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Адрес</div>
+                                <div class="contact-value">Владимир, ул. Ильича, 9</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Телефон</div>
+                                <div class="contact-value">+7 (900) 777-55-88</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Почта</div>
+                                <div class="contact-value">welcome@ilyicha-hotel.ru</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Навигация -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="rooms.html">Номера</a></li>
+                        <li><a href="restaurant.html">Ресторан</a></li>
+                        <li><a href="gallery.html" class="active">Галерея</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Соцсети -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/ilyicha_hotel" class="social-link" target="_blank">
+                            <div class="social-icon">📱</div>
+                            <span>Telegram</span>
+                        </a>
+                        
+                        <a href="https://vk.com/ilyicha_hotel" class="social-link" target="_blank">
+                            <div class="social-icon">👥</div>
+                            <span>ВКонтакте</span>
+                        </a>
+                        
+                        <a href="https://instagram.com/ilyicha_hotel" class="social-link" target="_blank">
+                            <div class="social-icon">📸</div>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                    
+                    <div class="footer-booking">
+                        <a href="/booking" class="booking-btn">
+                            <span>Забронировать номер</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Нижняя часть -->
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 Отель «Ильича». Все права защищены.</div>
+                <div class="footer-links-bottom">
+                    <a href="/privacy">Политика конфиденциальности</a>
+                    <a href="/terms">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+
+</body>
+
+</html>
