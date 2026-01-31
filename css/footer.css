@@ -1,0 +1,280 @@
+/* ПОДВАЛ САЙТА */
+.footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo .logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-logo .logo-icon::before {
+    background: #d32f2f;
+}
+
+.footer-logo .logo-main {
+    font-size: 20px;
+    color: white;
+}
+
+.footer-logo .logo-sub {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-icon {
+    font-size: 18px;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.contact-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-value {
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links li a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    padding-left: 0;
+}
+
+.footer-links li a::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #d32f2f;
+}
+
+.footer-links li a:hover {
+    color: white;
+    padding-left: 20px;
+}
+
+.footer-links li a:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+/* Соцсети */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.social-link:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    background: #d32f2f;
+}
+
+.social-link span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.footer-booking .booking-btn {
+    background: #d32f2f;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid #d32f2f;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-booking .booking-btn:hover {
+    background: #b71c1c;
+    border-color: #b71c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.3);
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-links-bottom {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links-bottom a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links-bottom a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .footer-column:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+        margin-top: 60px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-links-bottom {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .social-link {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+    }
+    
+    .footer-links-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

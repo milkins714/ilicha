@@ -1,0 +1,591 @@
+/* БЛОК МЕРОПРИЯТИЙ */
+.events-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Таймлайн мероприятий */
+.events-timeline {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 0; /* Добавляем отступ сверху */
+}
+
+/* Центральная линия */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #d32f2f, #ffd700, #d32f2f);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Контейнер для пары (цифра + карточка) */
+.timeline-pair {
+    position: relative;
+    min-height: 300px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* Вертикальное смещение для зигзага */
+.timeline-pair:nth-child(2) {
+    margin-top: 40px;
+}
+
+.timeline-pair:nth-child(3) {
+    margin-top: 80px;
+}
+
+.timeline-pair:nth-child(4) {
+    margin-top: 120px;
+}
+
+/* Карточка мероприятия */
+.event-card {
+    width: 40%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 2;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Карточки справа от линии */
+.card-right {
+    position: absolute;
+    left: 50%;
+    margin-left: 50px;
+    width: 40%;
+}
+
+/* Карточки слева от линии */
+.card-left {
+    position: absolute;
+    right: 50%;
+    margin-right: 50px;
+    width: 40%;
+}
+
+/* Изображение мероприятия */
+.event-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.05);
+}
+
+/* Дата мероприятия */
+.event-date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #d32f2f;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    z-index: 3;
+}
+
+.event-day {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.event-month {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+/* Контент карточки */
+.event-content {
+    padding: 20px;
+}
+
+.event-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    min-height: 46px;
+}
+
+.event-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    min-height: 42px;
+}
+
+/* Информация о мероприятии */
+.event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #d32f2f;
+}
+
+.event-location,
+.event-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #555;
+}
+
+.location-icon::before {
+    content: '📍';
+    font-size: 14px;
+}
+
+.time-icon::before {
+    content: '⏰';
+    font-size: 14px;
+}
+
+/* Кнопка подробнее */
+.event-details-btn {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.event-details-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #d32f2f;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.event-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-details-btn:hover::before {
+    width: 200px;
+    height: 200px;
+}
+
+.event-details-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* РИМСКИЕ ЦИФРЫ */
+.roman-numeral {
+    font-family: 'Times New Roman', serif;
+    font-weight: 900;
+    color: rgba(211, 47, 47, 0.15);
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-size: 200px;
+    opacity: 0.8;
+    height: 100%;
+}
+
+/* Цифры слева от линии */
+.roman-left {
+    position: absolute;
+    left: 10%;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Цифры справа от линии */
+.roman-right {
+    position: absolute;
+    right: 10%;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Модальное окно - УПРОЩЕННЫЙ ДИЗАЙН */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(8px);
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f8f9fa;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    z-index: 10001;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-weight: 300;
+}
+
+.modal-close:hover {
+    background: #d32f2f;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 40px;
+}
+
+.modal-event-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.modal-event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-event-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.modal-event-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #d32f2f;
+}
+
+.modal-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal-info-label {
+    font-size: 12px;
+    color: #888;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-info-value {
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.modal-event-description {
+    margin-bottom: 25px;
+}
+
+.modal-event-description h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-event-description p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.modal-event-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.modal-book-btn,
+.modal-map-btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 200px;
+    letter-spacing: 0.5px;
+}
+
+.modal-book-btn {
+    background: #d32f2f;
+    color: white;
+    border: 2px solid #d32f2f;
+}
+
+.modal-book-btn:hover {
+    background: #b71c1c;
+    border-color: #b71c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.25);
+}
+
+.modal-map-btn {
+    background: transparent;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+}
+
+.modal-map-btn:hover {
+    background: #1a1a1a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .timeline-pair {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        min-height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .event-card {
+        width: 80%;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        margin: 20px auto !important;
+    }
+    
+    .roman-numeral {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        margin: 20px 0;
+        font-size: 120px;
+        order: -1;
+    }
+    
+    .modal-event-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-event-actions {
+        flex-direction: column;
+    }
+    
+    .modal-book-btn,
+    .modal-map-btn {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    
+    .event-card {
+        width: 85%;
+    }
+    
+    .roman-numeral {
+        font-size: 100px;
+    }
+    
+    .modal-body {
+        padding: 30px 20px;
+    }
+    
+    .modal-event-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+    .events-timeline {
+        padding: 0 15px;
+    }
+    
+    .event-card {
+        width: 90%;
+    }
+    
+    .roman-numeral {
+        font-size: 80px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .modal-event-image {
+        height: 160px;
+    }
+    
+    .modal-book-btn,
+    .modal-map-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
